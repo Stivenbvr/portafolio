@@ -4,66 +4,80 @@
 }
 body{
     margin: 0;
-    background-color: black;
+    background-color: rgb(23, 23, 23);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
     height: 60px;
-    background-color: rgb(31, 31, 31);
+    background-color: rgba(255, 255, 255, 0.952);
+    filter: blur(0.3px);
     display: grid;
     position: fixed;
+    list-style: circle;
     z-index: 100;
     width: 100%;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 30% 20%;
 }
 .titulo h1{
     top: 20px;
     left: 27px;
+    color: black;
+    width: 60%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: relative;
     font-size: 18px;
 }
 
-.container {
+.containers {
+    width: 100%;
     background-image: url(/img/Amin\ copy.jpg.jpg);
+    background-size: cover;
     height: 650px;
 }
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
 
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.hamburger {
+display: none;
+cursor: pointer;
+}
+
+.line {
+width: 30px;
+height: 3px;
+background-color: #333;
+margin: 5px 0;
+}
+
+.menu {
+display: none;
+justify-content: space-between;
+align-items: center;
 }
 
 .menu li {
-    display: inline-block;
+list-style: none;
 }
-
-.menu li a {
-display: block;
+.containers h1 {
+top: 220px;
+left: 50px;
 position: relative;
-top: 22px;
-padding-left: 30px;
-text-decoration: none;
-color: rgb(223, 222, 222);
-font-weight: 600;
-font-size: 15px;
-}
-
-.container h1 {
-    top: 220px;
-    left: 50px;
-    position: relative;
-    color: rgb(222, 222, 222);
-    font-weight:900;
-    font-size: 60px;
-    width: 600px;
+color: rgb(222, 222, 222);
+font-weight:900;
+font-size: 60px;
+width: 600px;
 }
 .items {
-
-    display: grid;
-    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+padding: 40px;
+justify-content: center;
+display: grid;
+grid-template-columns: 15% 15% 15%;
 }
 
 .skill h1 {
@@ -73,13 +87,13 @@ font-size: 15px;
     padding: 70px;
     text-transform: capitalize;
 }
-
-.items {
-    font-size: 17px;
-    padding: 70px;
-    width: 100%;
+.react h1 {
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
 }
-
 .framework{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -90,20 +104,32 @@ font-size: 15px;
     height:  700px;
 }
 .framework p {
-    font-size: 20px;
-    padding-right: 20px;
+    font-size: 18px;
+    padding: 60px;
     position: relative;
-    top: 100px;
+    top: 20px;
     color: rgb(223, 223, 223);
 }
 .github {
-    background-color: rgb(243, 250, 36);
+    background-size: 200% 100%;
     display: grid;
-    top: 100px;
+    height: 600px;
+    top: 30px;
     position: relative;
     color: black;
     grid-template-columns: 50% 50%;
+    background-color: rgb(255, 255, 255);
 }
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 10% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 .github h1 {
     font-size: 40px;
     text-transform: capitalize;
@@ -121,13 +147,14 @@ font-size: 15px;
 .github h2 {
 position: relative;
 bottom: 220px;
-color: rgb(94, 93, 93);
+color: rgb(76, 76, 76);
 left: 80px;
+font-size: 20px;
 }
 
 .github p {
-font-size: 15px;
-color: rgb(74, 74, 74);
+font-size: 18px;
+color: rgb(100, 99, 99);
 position: relative;
 left: 80px;
 bottom: 190px;
@@ -146,7 +173,414 @@ bottom: 190px;
 }
 
 .github a:hover {
-    background-color: rgb(61, 61, 61);
-    color: rgb(238, 238, 238);
+    background-color:transparent;
+    color: rgb(42, 42, 42);
 }
 
+.bussines {
+    background-color: aliceblue;
+    background-size: cover;
+    height: 350px;
+    position: relative;
+}
+
+.bussines h1 {
+    color: rgb(68, 68, 68);
+    font-size: 40px;
+    position: relative;
+    text-align: initial;
+}
+
+.bussines p {
+    width: 70%;
+    padding-left: 70px;
+    color: rgb(126, 124, 124);
+    font-size: 18px;
+}
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+    --color: #3c3163;
+    --transition-time: 0.5s;
+}
+
+.empresas {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+
+.cards-wrapper {
+    display: grid;
+    bottom: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 4rem;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.card {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+    height: 15em;
+    width: 10em;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 0.5em;
+    padding: 1em;
+/*margin: 2em;*/
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 7em -1em black;
+    transition: all, var(--transition-time);
+    position: relative;
+    overflow: hidden;
+    border-left: solid 4px rgba(255, 255, 255, 0.519);
+    border-top: solid 1.5px rgba(255, 255, 255, 0.471);
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: rotate(0);
+}
+
+.card h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.card p {
+    font-size: 0.75em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 0.5em;
+    line-height: 2em;
+}
+
+.card .tags {
+    display: flex;
+}
+
+.card .tags .tag {
+    font-size: 0.75em;
+    background: rgb(0, 0, 0);
+    border-radius: 0.3rem;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    transition: all, var(--transition-time);
+}
+
+.card:hover .tags .tag {
+    background: var(--color);
+    color: rgb(255, 255, 255);
+}
+
+.card .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.70em;
+    padding: 1em;
+    line-height: 1em;
+    opacity: .8;
+}
+
+.card:before, .card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+}
+
+.card:before {
+    background: rgba(255, 255, 255, 0.92);
+    width: 250%;
+    height: 250%;
+}
+
+.card:after {
+    background: rgba(252, 252, 252, 0.869);
+    width: 200%;
+    height: 200%;
+}
+
+.card:hover {
+    color: black;
+}
+
+.card:hover:before, .card:hover:after {
+    transform: scale(1);
+}
+
+.card-grid-space .num {
+    font-size: 1.3em;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+}
+
+.info {
+    font-size: 1.2em;
+    display: flex;
+    padding: 1em 3em;
+    height: 3em;
+}
+
+.info img {
+    height: 3em;
+    margin-right: 0.5em;
+}
+
+.info h1 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+    .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cards-wrapper {
+    grid-template-columns: 1fr;
+    }
+    .info {
+    justify-content: center;
+    }
+    .card-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards-wrapper {
+    padding: 4rem 2rem;
+    }
+    .card {
+    max-width: calc(100vw - 4rem);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .info {
+    display: block;
+    text-align: center;
+    }
+.info h1 {
+    margin: 0;
+    }
+}
+
+.formulario {
+    background-image: url(/img/\ -9.jpg);
+    background-size: cover;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 800px;
+}
+
+.formulario input {
+margin: 20px;
+font-size: 16px;
+width: 40%;
+border-radius: 2px;
+height: 40px;
+}
+
+.formulario textarea {
+    width: 40%;
+    font-size: 16px;
+    margin: 20px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.formulario button {
+    font-size: 1em;
+    cursor: pointer;
+    padding: 1em 4em;
+    background-color: black;
+    color: aliceblue;
+    border: solid white 1px;
+    border-radius: 4px;
+}
+
+.formulario button:hover{
+    padding: 1em 4em;
+    font-size: 1em;
+    background-color: rgb(244, 244, 244);
+    color: rgb(63, 63, 63);
+
+}
+
+
+@media screen and (max-width: 900px) {
+.titulo h1{
+width: 350px;
+position: relative;
+top: 27px;
+font-size: 14px;
+}
+
+
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+.containers h1 {
+    width: 320px;
+    font-size: 37px;
+}
+.skill h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 70px;
+    text-transform: capitalize;
+}
+.react h1 {
+    font-size: 23px;
+}
+.framework {
+    display: block;
+}
+.framework img {
+    padding: none;
+    right: 15px;
+    position: relative;
+    width: 230px;
+    height: 300px;
+}
+.framework p {
+    font-size: 15px;
+}
+.items {
+    padding: none;
+    right: 26px;
+    position: relative;
+    justify-content: center;
+    display: grid;
+    font-size: 13px;
+    grid-template-columns: 40% 40% 10%;
+}
+.github{
+    height: 700px;
+    display: block;
+    padding: none;
+}
+.github h1 {
+    font-size: 40px;
+    padding : 30px;
+}
+.github p {
+font-size: 14px;
+padding: 20px;
+left: 0px;
+position: relative;
+}
+.github img {
+top: 300px;
+left: 0px;
+position: relative;
+width: 200px;
+height: 200px;
+}
+.github h2{
+left: 20px;
+width: 50%;
+top: -200px;
+}
+.github a {
+left: 240px;
+top: -87px;
+cursor: pointer;
+padding: 1em 2em;
+}
+
+.bussines {
+    background-color: aliceblue;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+
+.bussines h1{
+    color: rgb(24, 23, 23);
+}
+
+.bussines p{
+    color: rgb(77, 77, 77);
+    height: 400px;
+    padding-left:0;
+    font-size: 15px;
+    left: 10px;
+    width: 390px;
+    position: relative;
+
+}
+.empresas {
+
+    position: relative;
+    width: 100%;
+    background-color: aliceblue;
+}
+.card {
+    bottom: 130px;
+    width: 200px;
+    height: 300px;
+}
+.formulario input {
+    margin: 20px;
+    font-size: 16px;
+    width: 80%;
+    border-radius: 2px;
+    height: 40px;
+    }
+    
+    .formulario textarea {
+        width: 80%;
+        font-size: 16px;
+        margin: 20px;
+        height: 200px;
+        border-radius: 4px;
+    }
+
+}
