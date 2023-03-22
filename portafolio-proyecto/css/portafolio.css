@@ -32,7 +32,7 @@ body{
 
 .containers {
     width: 100%;
-    background-image: url(/img/Amin\ copy.jpg.jpg);
+    background-image: url(/portafolio-proyecto/img/Amin\ copy.jpg.jpg);
     background-size: cover;
     height: 650px;
 }
@@ -390,7 +390,7 @@ bottom: 190px;
 }
 
 .formulario {
-    background-image: url(/img/\ -9.jpg);
+    background-image: url(/portafolio-proyecto/img/\ -9.jpg);
     background-size: cover;
     width: 100%;
     justify-content: center;

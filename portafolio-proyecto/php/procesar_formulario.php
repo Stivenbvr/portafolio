@@ -6,7 +6,7 @@ if(isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['mensaje']
     $mensaje = $_POST ['mensaje'];
 
 //Conectar a la base de datos y almacenar los datos
-$conexion - mysqli_connect ("us-east.connect.psdb.cloud","h1o75fzjk3xn15mmy6xh","pscale_pw_uCfwREd7IV53l1ctTyWA8vYRj4Hqttd5ygkzxdBl5vn","dbportafolio");
+$conexion - mysqli_connect ("localhost","id20490791_stivenbouvier","!|($6LM@3ud1sl}E","id20490791_bdportafolioweb");
 $consulta = "INSERT INTO contactos (nombre,correo,mensaje) VALUES ('$nombre','$correo','$mensaje')";
 mysqli_query($conexion, $consulta);
 
